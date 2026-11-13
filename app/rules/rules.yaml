@@ -1,0 +1,28 @@
+return_window_days:
+  electronics: 7
+  headphones: 7
+  clothing: 30
+  footwear: 15
+  home: 10
+  kitchen: 10
+  beauty: 7
+  sports: 15
+non_returnable_categories:
+  - innerwear
+  - grocery
+valid_return_reasons:
+  - damaged
+  - defective
+  - wrong_item
+  - not_as_described
+  - size_fit
+  - changed_mind
+pickup_fee_usd: 10
+pickup_fee_waived_reasons:
+  - damaged
+  - defective
+  - wrong_item
+refund_days_original_payment: "3-5 business days"
+store_credit_instant: true
+auto_refund_max_usd: 500
+max_refunds_per_30_days: 3

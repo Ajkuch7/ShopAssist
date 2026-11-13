@@ -1,0 +1,17 @@
+models:
+  chat: qwen2.5:7b
+  chat_secondary: llama3.2:3b
+  embedding: nomic-embed-text
+  temperature: 0.0
+ollama:
+  base_url: http://localhost:11434
+database:
+  url: sqlite:///./data/shopassist.db
+chroma:
+  path: ./data/chroma
+refund:
+  max_days_since_delivery: 30
+  max_refund_amount: 500.0
+  eligible_order_statuses:
+    - delivered
+    - partially_delivered
