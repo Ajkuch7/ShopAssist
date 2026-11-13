@@ -1,0 +1,2 @@
+function OrderCards({ orders, onSelect }) { if (!orders?.length) return null; return <div className="order-cards">{orders.map((order, index) => <button className="order-card" key={order.order_id} onClick={() => onSelect(`Order ${order.order_id}`)}><div className={`order-image image-${index % 3}`}><span>0{index + 1}</span></div><div className="order-card-copy"><strong>{order.item_name}</strong><span>${Number(order.price).toFixed(2)}</span><small>{order.status} · {new Date(order.date).toLocaleDateString()}</small></div><b>→</b></button>)}</div> }
+export default OrderCards

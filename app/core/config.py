@@ -2,7 +2,6 @@
 
 from functools import lru_cache
 from pathlib import Path
-from typing import Any
 
 from pydantic import BaseModel
 from pydantic_settings import (
@@ -43,12 +42,10 @@ class ChromaSettings(BaseModel):
     path: str
 
 
-class RefundSettings(BaseModel):
-    """Non-LLM refund eligibility thresholds."""
+class CorsSettings(BaseModel):
+    """Allowed browser origins for the API."""
 
-    max_days_since_delivery: int
-    max_refund_amount: float
-    eligible_order_statuses: list[str]
+    origins: list[str]
 
 
 class Settings(BaseSettings):
@@ -65,7 +62,7 @@ class Settings(BaseSettings):
     ollama: OllamaSettings
     database: DatabaseSettings
     chroma: ChromaSettings
-    refund: RefundSettings
+    cors: CorsSettings
 
     @classmethod
     def settings_customise_sources(

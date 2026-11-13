@@ -1,0 +1,2 @@
+function ProductCard({ product, index, onSelect }) { return <article className="recommendation-card"><div className="recommendation-index">0{index + 1}</div><div><h4>{product.name}</h4><p>{product.key_features}</p><span className="rating">★ {product.rating}</span></div><strong>${Number(product.price).toFixed(2)}</strong><button onClick={() => onSelect(String(index + 1))}>Select</button></article> }
+export default ProductCard

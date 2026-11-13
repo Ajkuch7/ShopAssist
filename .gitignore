@@ -3,3 +3,7 @@ __pycache__/
 .pytest_cache/
 *.py[cod]
 .env
+*.db
+data/chroma/
+logs/
+frontend/dist/

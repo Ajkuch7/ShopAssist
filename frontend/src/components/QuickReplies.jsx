@@ -1,0 +1,2 @@
+function QuickReplies({ replies, onSelect, disabled }) { if (!replies?.length) return null; return <div className="quick-replies">{replies.map((reply) => <button key={reply} disabled={disabled} onClick={() => onSelect(reply)}>{reply}</button>)}</div> }
+export default QuickReplies

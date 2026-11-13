@@ -1,0 +1,3 @@
+import { useState } from 'react'
+function AgentActivity({ tools }) { const [open, setOpen] = useState(false); return <section className="agent-activity"><button className="activity-toggle" onClick={() => setOpen(!open)}><span><i />Agent activity</span><b>{open ? '−' : '+'}</b></button>{open && <div className="activity-content">{tools?.length ? tools.map((tool, index) => <div className="activity-row" key={`${tool}-${index}`}><span className="activity-dot" />{tool}<em>called</em></div>) : <p>No tools used on the latest reply.</p>}</div>}</section> }
+export default AgentActivity

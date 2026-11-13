@@ -9,9 +9,6 @@ database:
   url: sqlite:///./data/shopassist.db
 chroma:
   path: ./data/chroma
-refund:
-  max_days_since_delivery: 30
-  max_refund_amount: 500.0
-  eligible_order_statuses:
-    - delivered
-    - partially_delivered
+cors:
+  origins:
+    - http://localhost:5173
